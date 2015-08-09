@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:layout_height="40dp" >
+    
+    <TextView 
+        android:id="@+id/setting_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自动更新设置"
+        android:textSize="20sp"
+        />
+	<ImageView 
+	    android:id="@+id/setting_item_btn"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/on"
+	    android:layout_alignParentRight="true"
+	    />
+</RelativeLayout>

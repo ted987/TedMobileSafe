@@ -1,0 +1,83 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppBaseTheme" parent=""></style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="MyTitle">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">#399AD6</item>
+    </style>
+
+    <style name="SjfdTitle" parent="MyTitle">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5dp</item>
+    </style>
+	<style name="normalText">
+	    <item name="android:layout_width">wrap_content</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:padding">10dp</item>
+	    <item name="android:textColor"> @android:color/black</item>
+	</style>
+    <style name="SjfdText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+:        <item name="android:paddingLeft">5dp</item>
+    </style>
+
+    <style name="ItemText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:drawableLeft">@drawable/dialog_title_default_icon</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="SjfdImage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="SjfdNextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:background">@drawable/home_dialog_ok_selector</item>
+        <item name="android:drawableRight">@drawable/next</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:text">下一步</item>
+        <item name="android:onClick">clickNext</item>
+    </style>
+
+    <style name="SjfdRetreatButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:background">@drawable/home_dialog_ok_selector</item>
+        <item name="android:drawableLeft">@drawable/pre</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:text">上一步</item>
+        <item name="android:onClick">clickPre</item>
+    </style>
+	<style name="PopAnimation" parent="@android:style/Animation.Dialog">
+	    <item name="android:windowEnterAnimation">@anim/pop_enter</item>
+	    <item name="android:windowExitAnimation">@anim/pop_exit</item>
+	</style>
+</resources>

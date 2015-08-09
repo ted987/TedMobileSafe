@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<TextView 
+	    style="@style/MyTitle"
+	    android:text="软件管家"
+	    />
+	<com.itzwf.mobilesafe.view.ProgressDesView
+	    android:id="@+id/rjgj_pdv_rom"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    />
+		<com.itzwf.mobilesafe.view.ProgressDesView
+	    android:id="@+id/rjgj_pdv_sd"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+
+	    />
+		<FrameLayout 
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    >
+		<ListView 
+		    android:id="@+id/rjgj_lv"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:fastScrollEnabled="true"
+		    ></ListView>
+		<include layout="@layout/public_loading"/>
+		<TextView 
+		    android:id="@+id/rjgj_item_title"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:padding="4dp"
+		    android:background="#ffcccccc"
+		    android:text="xxx"
+		    android:textColor="#000000"
+		    />
+		</FrameLayout>
+		
+</LinearLayout>

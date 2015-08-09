@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView 
+        style="@style/MyTitle"
+        android:text="手机防盗"
+        />
+    <com.itzwf.mobilesafe.view.SjfdMyView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        >
+        <TextView 
+            android:layout_centerVertical="true"
+            android:text="安全号码"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView 
+            android:id="@+id/onsjfd_number_tv"
+            android:layout_centerVertical="true"
+            android:text="18654321970"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="20sp"
+            android:layout_marginRight="10dp"
+            />
+    </com.itzwf.mobilesafe.view.SjfdMyView>
+     <com.itzwf.mobilesafe.view.SjfdMyView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:clickable="true"
+        android:onClick="protect"
+        >
+        <TextView 
+            android:layout_centerVertical="true"
+            android:text="防盗保护是否开启"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            />
+        <ImageView 
+            android:id="@+id/onsjfd_lock_iv"
+            android:layout_centerVertical="true"
+            android:src="@drawable/lock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            />
+    </com.itzwf.mobilesafe.view.SjfdMyView>
+<com.itzwf.mobilesafe.view.SjfdMyView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:clickable="true"
+        android:onClick="reinstall"
+        >
+        <TextView 
+            android:layout_centerVertical="true"
+            android:text="重新进入设置向导页面"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            />
+        </com.itzwf.mobilesafe.view.SjfdMyView>
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#99000000"
+            android:text="功能介绍"
+            android:textSize="15sp"
+            android:textColor="@android:color/white"
+            android:gravity="center_vertical"
+          	android:paddingLeft="10dp"
+            />
+        <TextView
+        style="@style/ItemText"
+        android:text="GPS追踪#*location*#" />
+        <TextView
+        style="@style/ItemText"
+        android:text="远程销毁数据#*wipedata*#" />
+         <TextView
+        style="@style/ItemText"
+        android:text="播放报警音乐#*alarm*#" />
+          <TextView
+        style="@style/ItemText"
+        android:text="远程锁屏#*lockscreen*#" />
+</LinearLayout>

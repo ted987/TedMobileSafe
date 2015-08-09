@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/view_vpd_type_tv"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="内存:" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ProgressBar
+            android:id="@+id/view_vpd_pb"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:progressDrawable="@drawable/progress_horizontal"
+          
+            />
+
+        <TextView
+            android:id="@+id/view_vpd_left_tv"
+            style="@style/normalText"
+            android:text="xx已用" />
+
+        <TextView      
+            android:id="@+id/view_vpd_right_tv"
+            style="@style/normalText"
+            android:layout_alignParentRight="true"
+            android:text="xx可用" />
+    </RelativeLayout>
+
+</LinearLayout>

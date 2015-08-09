@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:padding="12dp" >
+	
+    <ImageView
+        android:id="@+id/hcql_item_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_contact" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/hcql_item_icon"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/hcql_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:text="xxx"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/hcql_item_size"
+             android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="xxx" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/hcql_item_clean"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:scaleType="center"
+        android:src="@drawable/cacheclean_selector" />
+
+</RelativeLayout>

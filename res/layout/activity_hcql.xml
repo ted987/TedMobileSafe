@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/MyTitle"
+        android:text="缓存清理" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/hcql_finish_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#399AD6"
+            android:gravity="center_vertical"
+            android:padding="12dp" >
+
+            <TextView
+                android:id="@+id/hcql_finish_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总共有X个程序有缓存,共XX KB"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/hcql_finish_bt"
+                android:text="快速扫描"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/home_dialog_ok_selector" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hcql_scan_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#399AD6"
+            android:padding="12dp" >
+
+            <RelativeLayout
+                android:id="@+id/scan_bg"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/scan_bg" >
+
+                <ImageView
+                    android:id="@+id/hcql_scan_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/scan_line" />
+
+                <ImageView
+                    android:id="@+id/hcql_scan_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/scan_bg"
+                android:orientation="vertical" >
+
+                <ProgressBar
+                    android:id="@+id/hcql_progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:progress="30"
+                    android:progressDrawable="@drawable/progress_scan" />
+
+                <TextView
+                    android:id="@+id/hcql_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:text="XXXX"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/hcql_size_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:text="XXXX"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/hcql_item"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+         >
+    </ListView>
+	<Button 
+	    android:layout_margin="8dp"
+	    android:id="@+id/hcql_cleanall_btn"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="0"
+	    android:background="@drawable/home_dialog_ok_selector"
+	    android:text="一键清理"
+	    />
+</LinearLayout>

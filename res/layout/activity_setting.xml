@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:itzwf="http://schemas.android.com/apk/res/com.itzwf.mobilesafe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/MyTitle"
+      	
+        android:text="设置中心" />
+
+    <com.itzwf.mobilesafe.view.SettingItemView
+       android:id="@+id/setting_siv_autoupdate"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        itzwf:itbackground="first"
+        itzwf:title="自动更新设置" />
+
+    <com.itzwf.mobilesafe.view.SettingItemView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        itzwf:itbackground="last"
+        itzwf:title="骚扰拦截设置" />
+
+    <com.itzwf.mobilesafe.view.SettingItemView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        itzwf:itbackground="first"
+        itzwf:title="归属地异常设置" />
+
+    <com.itzwf.mobilesafe.view.SettingItemView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        itzwf:itbackground="last"
+        itzwf:title="归属地风格设置" />
+
+</LinearLayout>
