@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
             android:layout_toRightOf="@+id/home_iv_logo"
-            android:text="黑马程序员安全卫士,时刻保护你的安全.http://www.itheima.com"
+            android:text="峰卫士,时刻保护你的安全.tedstar1987@126.com"
             android:textColor="@android:color/holo_red_dark" />
 
         <ImageView

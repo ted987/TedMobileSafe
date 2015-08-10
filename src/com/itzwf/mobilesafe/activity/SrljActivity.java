@@ -164,6 +164,38 @@ public class SrljActivity extends Activity implements OnClickListener,
 		}
 	}
 
+	private void startQuery(final int pageSize, final int offset) {
+		mLoading.setVisibility(View.VISIBLE);
+		// 开线程去查询数据
+		new Thread() {
+			public void run() {
+				try {
+					Thread.sleep(300);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+
+				// 接口访问--》net
+				// 初始化List数据
+				// mDatas = mDao.findAll();
+				final List<BlackInfo> part = bdao.findPart(pageSize, offset);
+
+				// 主线程中设置adapter
+
+				runOnUiThread(new Runnable() {
+					public void run() {
+						mLoading.setVisibility(View.GONE);
+
+						if (part != null) {
+
+							mData.addAll(part);
+							mAdapter.notifyDataSetChanged();
+						}
+					}
+				});
+			}
+		}.start();
+	}
 	public class ManageAdapter extends BaseAdapter {
 
 		@Override
@@ -234,10 +266,14 @@ public class SrljActivity extends Activity implements OnClickListener,
 					if (delete) {
 						// LIST立刻删除数据,刷新LIST
 						mData.remove(info);
-
+						
 						mAdapter.notifyDataSetChanged();
+						
+						
 						Toast.makeText(SrljActivity.this, "删除成功",
 								Toast.LENGTH_SHORT).show();
+						
+						startQuery(1, mData.size());
 					} else {
 						Toast.makeText(SrljActivity.this, "删除成功",
 								Toast.LENGTH_SHORT).show();

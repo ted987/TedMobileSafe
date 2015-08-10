@@ -13,7 +13,7 @@
         android:text="激活系统管理员:\n如果手机丢失,可以远程锁屏,远\n远程擦除数据" />
 
     <RelativeLayout
-        android:id="@+id/sjfd_bind_rl"
+        android:id="@+id/sjfd4_admin_rl"
         android:layout_width="fill_parent"
         android:layout_height="48dp"
         android:layout_marginLeft="5dp"
@@ -21,6 +21,7 @@
         android:background="@drawable/dg_btn_confirm_select" >
 
         <ImageView
+            android:id="@+id/sjfd4_admin_iv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"

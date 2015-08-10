@@ -19,6 +19,7 @@
         itzwf:title="自动更新设置" />
 
     <com.itzwf.mobilesafe.view.SettingItemView
+         android:id="@+id/setting_siv_srlj"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         itzwf:itbackground="last"
