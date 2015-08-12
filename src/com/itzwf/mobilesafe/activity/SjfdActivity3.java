@@ -28,7 +28,7 @@ public class SjfdActivity3 extends BaseSjfdActivity {
 		mBt = (Button) findViewById(R.id.sjfd_safenumber_bt);
 		String number = PreferenceUtils.getString(this, Constants.SAFE_NUMBER);
 		mNumber.setText(number);
-		if (mNumber != null) {
+		if (!TextUtils.isEmpty(number)) {
 			mNumber.setSelection(number.length());
 		}
 		// 设置按钮点击事件
@@ -53,7 +53,7 @@ public class SjfdActivity3 extends BaseSjfdActivity {
 				String number = data.getStringExtra(ContactListView.KEY_NUM);
 				mNumber.setText(number);
 				PreferenceUtils.putString(SjfdActivity3.this,  Constants.SAFE_NUMBER, number);
-				if(mNumber!=null){
+				if(!TextUtils.isEmpty(number)){
 					mNumber.setSelection(number.length());
 				}
 				break;

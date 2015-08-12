@@ -20,7 +20,7 @@ public class BootCompleteReceiver extends BroadcastReceiver {
 		//获取现在的SIM卡
 		String currentSim = tm.getSimSerialNumber();
 		//获取绑定的SIM卡
-		String localSim = PreferenceUtils.getString(context, Constants.SIM+"12");
+		String localSim = PreferenceUtils.getString(context, Constants.SIM);
 		//判断2个SIM卡是否相同,如果不同就发短信告诉手机有可能给盗了
 		if(!currentSim.equals(localSim)){
 			SmsManager manager = SmsManager.getDefault();
